@@ -7,7 +7,7 @@ cp .env.example .env
 
 Запустить контейнер
 ```shell script
-docker-compose up  --build -d
+docker-compose up -d
 ```
 
 Применить доступные миграции
