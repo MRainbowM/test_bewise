@@ -1,6 +1,6 @@
 import re
 
-from sqlalchemy import BigInteger, Column, MetaData
+from sqlalchemy import MetaData
 from sqlalchemy.ext.declarative import as_declarative, declared_attr
 
 # Default naming convention for all indexes and constraints
@@ -27,8 +27,6 @@ metadata = MetaData(naming_convention=convention)
 @as_declarative(metadata=metadata)
 class Base(object):
     __name__: str
-
-    id = Column(BigInteger, primary_key=True)
 
     # Generate __tablename__ automatically
     @declared_attr
